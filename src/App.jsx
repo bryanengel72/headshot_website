@@ -36,7 +36,7 @@ const Navbar = () => {
           : 'bg-transparent text-ivory'
           }`}
       >
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-2">
           <span className="font-serif text-2xl font-bold italic text-champagne">101</span>
           <span className="hidden sm:inline font-sans text-sm font-semibold tracking-wider uppercase">Headshots</span>
         </div>
@@ -102,7 +102,7 @@ const Hero = () => {
           alt="Dark moody editorial headshot"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/40 to-transparent z-0"></div>
       </div>
 
       {/* Scroll Hint */}
@@ -138,7 +138,7 @@ const DiagnosticShuffler = () => {
   }, []);
 
   return (
-    <div className="relative h-56 w-full">
+    <div className="relative h-56 w-full z-10">
       {activeCards.map((card, index) => (
         <div
           key={card.id}
@@ -200,7 +200,7 @@ const TelemetryTypewriter = () => {
   }, [messageIndex, isTyping]);
 
   return (
-    <div className="flex h-56 w-full flex-col justify-between rounded-[2rem] border border-white/5 bg-slate/40 backdrop-blur-md p-6 shadow-lg">
+    <div className="flex h-56 w-full flex-col justify-between rounded-[2rem] border border-white/5 bg-slate/40 backdrop-blur-md p-6 shadow-lg z-10 relative">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 font-mono text-[10px] uppercase text-champagne">
           <span className="relative flex h-2 w-2">
@@ -256,7 +256,7 @@ const CursorProtocolScheduler = () => {
   const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
   return (
-    <div ref={containerRef} className="relative flex h-56 w-full flex-col rounded-[2rem] border border-white/5 bg-slate/40 backdrop-blur-md p-6 shadow-lg overflow-hidden">
+    <div ref={containerRef} className="relative flex h-56 w-full flex-col rounded-[2rem] border border-white/5 bg-slate/40 backdrop-blur-md p-6 shadow-lg overflow-hidden z-10">
       <div className="flex items-center gap-2 mb-3">
         <MapPin className="h-4 w-4 text-champagne" />
         <h4 className="font-sans text-base font-bold text-ivory">Book Your Location</h4>
@@ -318,7 +318,7 @@ const Features = () => {
   }, []);
 
   return (
-    <section ref={containerRef} id="approach" className="relative z-20 mx-auto max-w-7xl px-6 sm:px-12 py-32 bg-obsidian text-ivory">
+    <section ref={containerRef} id="approach" className="relative z-30 mx-auto max-w-7xl px-6 sm:px-12 py-32 bg-obsidian text-ivory">
       <div className="mb-16 text-center">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-champagne mb-3">What Sets Us Apart</p>
         <h2 className="font-serif text-4xl font-bold italic text-ivory md:text-6xl">Three promises, zero compromise.</h2>
