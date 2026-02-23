@@ -32,8 +32,8 @@ const Navbar = () => {
     <nav className="fixed left-0 right-0 top-6 z-40 mx-auto max-w-5xl px-4 sm:px-6">
       <div
         className={`flex items-center justify-between rounded-full px-6 py-4 transition-all duration-500 ${scrolled
-            ? 'bg-white/80 backdrop-blur-xl border border-black/5 text-ink shadow-lg'
-            : 'bg-transparent text-ink'
+          ? 'bg-white/80 backdrop-blur-xl border border-black/5 text-ink shadow-lg'
+          : 'bg-transparent text-ink'
           }`}
       >
         <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ const Hero = () => {
         <p className="hero-text font-mono text-xs uppercase tracking-[0.2em] text-muted mb-4">
           Professional Headshot Photography
         </p>
-        <h1 className="hero-text font-serif text-5xl leading-[1.1] font-bold text-ink md:text-7xl lg:text-8xl">
+        <h1 className="hero-text font-serif text-4xl leading-[1.1] font-bold text-ink md:text-6xl lg:text-7xl">
           Your first<br />
           impression,<br />
           <span className="text-coral italic">unforgettable.</span>
@@ -550,8 +550,8 @@ const Pricing = () => {
             <div
               key={i}
               className={`relative flex flex-col rounded-[2.5rem] p-8 md:p-10 transition-transform duration-500 hover:-translate-y-2 ${pkg.highlight
-                  ? 'bg-ink text-white ring-2 ring-coral md:scale-105 shadow-2xl z-10'
-                  : 'bg-white border border-black/5 text-ink shadow-xl'
+                ? 'bg-ink text-white ring-2 ring-coral md:scale-105 shadow-2xl z-10'
+                : 'bg-white border border-black/5 text-ink shadow-xl'
                 }`}
             >
               {pkg.highlight && (
@@ -577,8 +577,8 @@ const Pricing = () => {
 
               <MagneticButton
                 className={`w-full ${pkg.highlight
-                    ? 'bg-coral text-white'
-                    : 'bg-softgray text-ink hover:bg-ink hover:text-white'
+                  ? 'bg-coral text-white'
+                  : 'bg-softgray text-ink hover:bg-ink hover:text-white'
                   }`}
               >
                 Book Session
