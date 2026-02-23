@@ -402,30 +402,46 @@ const Protocol = () => {
   useEffect(() => {
     let ctx = gsap.context(() => {
       const cards = gsap.utils.toArray('.protocol-card');
-      const totalScroll = cards.length * 100 + 'vh';
 
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: 'top top',
-        end: `+=${totalScroll}`,
-        pin: true,
-        pinSpacing: true,
+      // First card starts in view, others start below the screen
+      gsap.set(cards, { yPercent: 100 });
+      gsap.set(cards[0], { yPercent: 0 });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top top',
+          end: `+=${cards.length * 100}%`,
+          pin: true,
+          pinSpacing: true,
+          scrub: 1,
+        },
       });
 
       cards.forEach((card, i) => {
         if (i === 0) return;
-        gsap.to(cards[i - 1], {
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: () => `top -${(i - 1) * window.innerHeight}px`,
-            end: () => `top -${i * window.innerHeight}px`,
-            scrub: true,
+
+        // Animate the previous card to scale down and blur
+        tl.to(
+          cards[i - 1],
+          {
+            scale: 0.92,
+            opacity: 0.4,
+            filter: 'blur(15px)',
+            ease: 'none',
           },
-          scale: 0.92,
-          opacity: 0.4,
-          filter: 'blur(15px)',
-          ease: 'none',
-        });
+          i // Insert at timeline position 'i'
+        );
+
+        // Animate the current card up to cover it
+        tl.to(
+          card,
+          {
+            yPercent: 0,
+            ease: 'none',
+          },
+          i // Insert at the same time so they transition together
+        );
       });
     }, containerRef);
 
@@ -487,12 +503,12 @@ const Protocol = () => {
   ];
 
   return (
-    <section ref={containerRef} id="process" className="relative h-screen w-full bg-obsidian">
+    <section ref={containerRef} id="process" className="relative h-screen w-full bg-obsidian overflow-hidden">
       {steps.map((step, index) => (
         <div
           key={step.id}
           className="protocol-card absolute inset-0 flex h-full w-full items-center justify-center p-6 md:p-12"
-          style={{ zIndex: steps.length - index }}
+          style={{ zIndex: index }}
         >
           <div className="relative flex h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-[3rem] border border-white/5 bg-slate shadow-2xl md:h-[70vh] md:flex-row">
             <div className="flex w-full flex-col justify-between p-10 md:w-1/2 md:p-16">
