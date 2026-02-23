@@ -74,7 +74,7 @@ const Hero = () => {
     <section ref={containerRef} className="relative flex h-[100dvh] w-full items-center bg-warmwhite overflow-hidden">
       {/* Left Content */}
       <div className="relative z-10 w-full px-6 sm:px-12 lg:w-1/2 lg:pl-[8%] xl:pl-[12%] pt-32 md:pt-24 lg:pt-32">
-        <p className="hero-text font-mono text-xs uppercase tracking-[0.2em] text-muted mb-4">
+        <p className="hero-text font-mono text-xs uppercase tracking-[0.2em] text-muted mb-4 block">
           Professional Headshot Photography
         </p>
         <h1 className="hero-text font-serif text-4xl leading-[1.1] font-bold text-ink md:text-6xl lg:text-7xl">
