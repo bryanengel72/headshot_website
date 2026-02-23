@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-warmwhite text-ink font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+
+  /* Magnetic Button Hover Effect */
+  .btn-magnetic {
+    @apply relative overflow-hidden transition-transform duration-500 will-change-transform;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .btn-magnetic:hover {
+    transform: scale(1.03);
+  }
+
+  /* Lift interaction for links */
+  .hover-lift {
+    @apply transition-transform duration-300;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-1px);
+  }
+}
