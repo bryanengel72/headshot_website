@@ -73,7 +73,7 @@ const Hero = () => {
   return (
     <section ref={containerRef} className="relative flex min-h-[100dvh] w-full items-center bg-warmwhite overflow-hidden pb-12">
       {/* Left Content */}
-      <div className="relative z-10 w-full px-6 sm:px-12 lg:w-1/2 lg:pl-[8%] xl:pl-[12%] pt-32 md:pt-24 lg:pt-32">
+      <div className="relative z-10 w-full px-6 sm:px-12 lg:w-1/2 lg:pl-[8%] xl:pl-[12%] pt-16">
         <p className="hero-text font-mono text-xs uppercase tracking-[0.2em] text-muted mb-4 block">
           Professional Headshot Photography
         </p>
@@ -82,10 +82,10 @@ const Hero = () => {
           impression,<br />
           <span className="text-coral italic">unforgettable.</span>
         </h1>
-        <p className="hero-text mt-8 max-w-md font-sans text-base leading-relaxed text-muted">
+        <p className="hero-text mt-6 max-w-md font-sans text-base leading-relaxed text-muted">
           Documentary-style authenticity meets editorial precision. We capture who you actually are — delivered the same day.
         </p>
-        <div className="hero-cta mt-10 flex flex-wrap items-center gap-4">
+        <div className="hero-cta mt-8 flex flex-wrap items-center gap-4">
           <MagneticButton className="bg-coral text-white font-semibold px-8 py-4 text-base">
             Book a Session <ArrowRight className="h-4 w-4" />
           </MagneticButton>
