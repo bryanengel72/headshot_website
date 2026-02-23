@@ -494,7 +494,7 @@ const Protocol = () => {
           className="protocol-card absolute inset-0 flex h-full w-full items-center justify-center p-6 md:p-12"
           style={{ zIndex: index }}
         >
-          <div className="relative flex h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-[3rem] border border-white/5 bg-slate/40 backdrop-blur-md shadow-2xl md:h-[70vh] md:flex-row">
+          <div className="relative flex h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-[3rem] border border-white/5 bg-slate shadow-2xl md:h-[70vh] md:flex-row">
             <div className="flex w-full flex-col justify-between p-10 md:w-1/2 md:p-16">
               <div className="font-mono text-6xl font-light text-champagne/20 md:text-8xl">{step.id}</div>
               <div className="mt-8 md:mt-0">
