@@ -492,7 +492,7 @@ const Protocol = () => {
         <div
           key={step.id}
           className="protocol-card absolute inset-0 flex h-full w-full items-center justify-center p-6 md:p-12"
-          style={{ zIndex: index }}
+          style={{ zIndex: steps.length - index }}
         >
           <div className="relative flex h-[80vh] w-full max-w-6xl flex-col overflow-hidden rounded-[3rem] border border-white/5 bg-slate shadow-2xl md:h-[70vh] md:flex-row">
             <div className="flex w-full flex-col justify-between p-10 md:w-1/2 md:p-16">
