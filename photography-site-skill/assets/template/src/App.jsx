@@ -73,10 +73,7 @@ const Hero = () => {
   return (
     <section ref={containerRef} className="relative flex min-h-[100dvh] w-full items-center bg-obsidian overflow-hidden pb-12">
       {/* Left Content */}
-      <div className="relative z-10 w-full px-6 sm:px-12 lg:w-1/2 lg:pl-[8%] xl:pl-[12%] pt-16">
-        <p className="hero-text font-mono text-xs uppercase tracking-[0.2em] text-champagne mb-4 block">
-          Professional Headshot Photography
-        </p>
+      <div className="relative z-10 w-full px-6 sm:px-12 lg:w-1/2 lg:pl-[8%] xl:pl-[12%] pt-16 mt-12 md:mt-0">
         <h1 className="hero-text font-serif text-4xl leading-[1.1] font-bold text-ivory md:text-6xl lg:text-7xl">
           Headshot<br />
           Photography<br />
