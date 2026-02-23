@@ -7,16 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: '#111111',
-        coral: '#E8553D',
-        warmwhite: '#FAFAF8',
-        muted: '#6B6B6B',
-        softgray: '#F0EFED',
+        obsidian: '#0D0D12',
+        champagne: '#C9A84C',
+        ivory: '#FAF8F5',
+        slate: '#2A2A35',
       },
       fontFamily: {
-        sans: ['DM Sans', 'sans-serif'],
-        serif: ['"Cormorant Garamond"', 'serif'],
-        mono: ['"IBM Plex Mono"', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
+        serif: ['"Playfair Display"', 'serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
       },
     },
   },

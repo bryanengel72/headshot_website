@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-warmwhite text-ink font-sans antialiased overflow-x-hidden;
+    @apply bg-obsidian text-ivory font-sans antialiased overflow-x-hidden;
   }
 }
 
